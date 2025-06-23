@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
     "ghcr.io/devcontainers/features/postgres:1": {
-      "version": "15",
+      "version": "16",
       "database": "restaurant_reviews",
       "user": "postgres",
       "password": "postgres"
