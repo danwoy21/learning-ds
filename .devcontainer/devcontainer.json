@@ -1,0 +1,12 @@
+{
+  "name": "PostgreSQL Auto Setup",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/postgres:1": {
+      "version": "14",
+      "postgresql-user": "bahleel",
+      "postgresql-password": "genkbahleel",
+      "postgresql-db": "restaurant_reviews"
+    }
+  }
+}
