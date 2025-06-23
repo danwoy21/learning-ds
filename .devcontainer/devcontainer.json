@@ -1,12 +1,20 @@
-// .devcontainer/devcontainer.json
 {
-  "name": "PostgreSQL Auto Setup",
+  "name": "Flask + PostgreSQL",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
     "ghcr.io/devcontainers/features/postgres:1": {
-      "version": "14",
-      "postgresql-user": "bahleel",
-      "postgresql-password": "bahleelgenk",
-      "postgresql-db": "restaurant_reviews"
+      "version": "15",
+      "database": "restaurant_reviews",
+      "user": "postgres",
+      "password": "postgres"
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "forwardPorts": [5000],
+  "portsAttributes": {
+    "5000": {
+      "label": "Flask Web Server",
+      "onAutoForward": "openBrowser"
     }
   }
 }
